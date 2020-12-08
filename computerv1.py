@@ -23,7 +23,6 @@ def simplify_equation(equation) :
             equation_split[i] = "+"
         i += 1 
     changed_equation = left + " " + " ".join(equation_split)
-    print(changed_equation)
     equation_split = changed_equation.split(" ")
     if (equation_split[0] != "-"):
         equation_split.insert(0, "+")

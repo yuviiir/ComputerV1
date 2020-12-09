@@ -80,19 +80,19 @@ def solve_equation(equation) :
         if (equation_split[i] == "X^2"):
             a = float(equation_split[i - 2]) if equation_split[i - 3] != "-" else float(equation_split[i - 2]) * -1
         i += 1
-    if highest_power == 0:
-        if c == 0 :
+    if (highest_power == 0):
+        if (c == 0):
             print ("The solution is all real numbers")
-        else :
+        else:
             print("No real solution")
-    if highest_power == 1:
+    if (highest_power == 1):
         solution = (c * -1) / (b)
         print("Solution: " + str(solution))
-    if highest_power == 2:
-        if a == 0:
+    if (highest_power == 2):
+        if (a == 0):
             print("Can't solve!")
             return(0)
-        if (b**2 - (4*a*c)) < 0:
+        if ((b**2 - (4*a*c)) < 0):
             print("Discriminant is strictly negative, the two solutions are:")
             solution = (-b - (b**2 - (4*a*c))**0.5)/(2 * a)
             print(str(solution))

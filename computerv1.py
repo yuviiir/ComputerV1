@@ -43,10 +43,7 @@ def simplify_equation(equation):
                 else:
                     equation_split[i - 3] = "+"
                     equation_split[i - 2] = str(sum)
-                equation_split.pop(j)
-                equation_split.pop(j - 1)
-                equation_split.pop(j - 2)
-                equation_split.pop(j - 3)
+                equation_split = equation_split[:j - 3] + equation_split[j + 1:]
                 j -= 4
             j += 4
         i += 4

@@ -35,8 +35,8 @@ def simplify_equation(equation):
     while (i < len(equation_split)):
         while (j < len(equation_split)):
             if (equation_split[i] == equation_split[j]):
-                sum = int(equation_split[i - 2]) if equation_split[i - 3] == "+" else int(equation_split[i - 2]) * -1
-                sum = sum + int(equation_split[j - 2]) if equation_split[j - 3] == "+" else sum - int(equation_split[j - 2])
+                sum = float(equation_split[i - 2]) if equation_split[i - 3] == "+" else float(equation_split[i - 2]) * -1
+                sum = sum + float(equation_split[j - 2]) if equation_split[j - 3] == "+" else sum - float(equation_split[j - 2])
                 if (sum < 0):
                     equation_split[i - 3] = "-"
                     equation_split[i - 2] = str(sum * -1)
